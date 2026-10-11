@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KINTSU — азиатская кухня в Таллине</title>
+    <meta
+      name="description"
+      content="KINTSU — ресторан азиатской кухни в Ротерманни, Таллин. Омакасе-стойка, робата на углях, дим-самы и авторские коктейли."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="mark" viewBox="0 0 64 64">
+          <path
+            d="M47.5 12.5 A24 24 0 1 0 55.5 37"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.6"
+            stroke-linecap="round"
+          />
+          <path
+            d="M52.6 20.5 A24 24 0 0 1 55.9 30"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            opacity=".55"
+          />
+          <path
+            d="M21 11.5 L27.5 22 L23.5 29.5 L33 37.5 L29.5 46 L33.5 54"
+            style="fill: none; stroke: var(--seam, #c2502f)"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          />
+          <circle
+            cx="33"
+            cy="37.5"
+            r="1.7"
+            style="fill: var(--seam, #c2502f)"
+          />
+        </symbol>
+
+        <pattern
+          id="waves"
+          width="48"
+          height="24"
+          patternUnits="userSpaceOnUse"
+        >
+          <g fill="none" stroke="currentColor" stroke-width="0.8">
+            <circle cx="24" cy="24" r="22" />
+            <circle cx="24" cy="24" r="16" />
+            <circle cx="24" cy="24" r="10" />
+            <circle cx="24" cy="24" r="4" />
+            <circle cx="0" cy="12" r="22" />
+            <circle cx="0" cy="12" r="16" />
+            <circle cx="0" cy="12" r="10" />
+            <circle cx="48" cy="12" r="22" />
+            <circle cx="48" cy="12" r="16" />
+            <circle cx="48" cy="12" r="10" />
+          </g>
+        </pattern>
+      </defs>
+    </svg>
+
+    <header class="header" id="header">
+      <div class="topbar">
+        <div class="container topbar__inner">
+          <span data-i18n="top.address">Ротерманни 9, Таллин</span>
+          <span class="topbar__mid" data-i18n="top.hours"
+            >Вт–Сб 18:00–00:00 · Вс 13:00–17:00</span
+          >
+          <div class="lang" role="group" aria-label="Язык / Language">
+            <button
+              type="button"
+              class="lang__btn is-active"
+              data-lang="ru"
+              aria-pressed="true"
+            >
+              RU
+            </button>
+            <button
+              type="button"
+              class="lang__btn"
+              data-lang="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <div class="container bar__inner">
+          <a href="#top" class="logo" aria-label="KINTSU">
+            <svg class="logo__mark" aria-hidden="true">
+              <use href="#mark" />
+            </svg>
+            <span class="logo__text">
+              <span class="logo__word">KINTSU</span>
+              <span class="logo__sub">Asian kitchen · Tallinn</span>
+            </span>
+          </a>
+
+          <nav class="nav" id="nav" aria-label="Menu">
+            <a href="#story" data-i18n="nav.story">История</a>
+            <a href="#menu" data-i18n="nav.menu">Меню</a>
+            <a href="#spaces" data-i18n="nav.spaces">Залы</a>
+            <a href="#gallery" data-i18n="nav.gallery">Атмосфера</a>
+            <a href="#visit" data-i18n="nav.visit">Как найти</a>
+            <a href="#reserve" class="nav__cta" data-i18n="nav.cta"
+              >Забронировать</a
+            >
+          </nav>
+
+          <button
+            class="burger"
+            id="burger"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="nav"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero__sun" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow reveal" data-i18n="hero.eyebrow">
+              Азиатская кухня · Ротерманни, Таллин
+            </p>
+            <h1 class="hero__title reveal" data-i18n="hero.title">
+              Красота<br /><em>в каждом</em><br />шве
+            </h1>
+            <p class="lead reveal" data-i18n="hero.lead">
+              Япония, Корея, Таиланд и Вьетнам за одним столом. Омакасе у
+              стойки, робата на углях бинтётан и коктейли на юдзу и сакэ.
+            </p>
+            <div class="hero__actions reveal">
+              <a href="#reserve" class="btn btn--primary">
+                <span data-i18n="btn.reserve">Забронировать стол</span>
+                <svg
+                  width="24"
+                  height="10"
+                  viewBox="0 0 24 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0 5h23M19 1l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                  />
+                </svg>
+              </a>
+              <a href="#menu" class="btn btn--line" data-i18n="btn.menu"
+                >Смотреть меню</a
+              >
+            </div>
+          </div>
+
+          <div class="hero__visual reveal">
+            <figure class="hero__photo">
+              <img
+                src="https://images.unsplash.com/photo-1681270543584-8e541a1bb056?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                alt="Шеф готовит блюдо"
+                width="1200"
+                height="1500"
+                fetchpriority="high"
+              />
+            </figure>
+            <figure class="hero__photo-sm">
+              <img
+                src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
+                alt="Суши на чёрной тарелке"
+                width="700"
+                height="700"
+                loading="lazy"
+              />
+            </figure>
+            <div class="hero__badge">
+              <b>8</b>
+              <span data-i18n="hero.badge">мест у стойки<br />омакасе</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="hero__info">
+            <div>
+              <span data-i18n="info.k1">Кухня</span>
+              <p data-i18n="info.v1">Япония · Корея · Таиланд · Вьетнам</p>
+            </div>
+            <div>
+              <span data-i18n="info.k2">Ужин</span>
+              <p data-i18n="info.v2">Вт–Сб, 18:00–00:00</p>
+            </div>
+            <div>
+              <span data-i18n="info.k3">Средний чек</span>
+              <p>60–80 €</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg><rect width="100%" height="100%" fill="url(#waves)" /></svg>
+      </div>
+
+      <section class="story" id="story">
+        <div class="container story__grid">
+          <div class="story__visual reveal">
+            <figure class="story__photo">
+              <img
+                src="https://images.unsplash.com/photo-1576863514292-542ef379c13b?auto=format&amp;fit=crop&amp;w=1100&amp;q=80"
+                alt="Красные бумажные фонари"
+                loading="lazy"
+                width="1100"
+                height="1400"
+              />
+            </figure>
+            <div class="story__note">
+              <svg
+                class="story__note-mark"
+                viewBox="0 0 64 64"
+                aria-hidden="true"
+              >
+                <use href="#mark" />
+              </svg>
+              <p data-i18n="story.note">
+                Кинцуги — японское искусство чинить разбитую керамику. Трещину
+                не прячут, а выделяют, и она становится украшением.
+              </p>
+            </div>
+          </div>
+
+          <div class="story__text">
+            <p class="eyebrow" data-i18n="story.eyebrow">01 — История</p>
+            <h2 class="h2 reveal" data-i18n="story.title">
+              Мы собираем<br /><em>Азию</em> по осколкам
+            </h2>
+            <p class="body reveal" data-i18n="story.body">
+              Каждое блюдо KINTSU — это шов между двумя традициями. Японская
+              точность ножа и корейская ферментация. Тайская кислинка и
+              вьетнамские травы. Эстонская рыба, морские водоросли и северные
+              ягоды — в азиатской технике.
+            </p>
+            <div class="facts reveal">
+              <div class="fact">
+                <b>900 °C</b
+                ><span data-i18n="fact1"
+                  >Угли бинтётан из белого дуба для робаты</span
+                >
+              </div>
+              <div class="fact">
+                <b data-i18n="fact2.b">21 день</b
+                ><span data-i18n="fact2"
+                  >Сухая выдержка рыбы по технике дзюкусэй</span
+                >
+              </div>
+              <div class="fact">
+                <b>40+</b
+                ><span data-i18n="fact3"
+                  >Сакэ, сётю и японский виски в карте</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu" data-theme="omakase">
+        <svg class="menu__pattern" aria-hidden="true">
+          <rect width="100%" height="100%" fill="url(#waves)" />
+        </svg>
+        <div class="container">
+          <div class="menu__head">
+            <div>
+              <p class="eyebrow" data-i18n="menu.eyebrow">02 — Меню</p>
+              <h2 class="h2" id="menu-title">Омакасе</h2>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Menu">
+              <button
+                class="tab is-active"
+                role="tab"
+                aria-selected="true"
+                data-menu="omakase"
+              >
+                <i class="tab__dot"></i
+                ><span data-i18n="tab.omakase">Омакасе</span>
+              </button>
+              <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                data-menu="robata"
+              >
+                <i class="tab__dot"></i
+                ><span data-i18n="tab.robata">Робата</span>
+              </button>
+              <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                data-menu="dimsum"
+              >
+                <i class="tab__dot"></i
+                ><span data-i18n="tab.dimsum">Дим-сам</span>
+              </button>
+              <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                data-menu="bar"
+              >
+                <i class="tab__dot"></i><span data-i18n="tab.bar">Бар</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="menu__layout">
+            <figure class="menu__photo">
+              <img
+                id="menu-img"
+                src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                alt=""
+                loading="lazy"
+                width="1000"
+                height="1250"
+              />
+              <figcaption id="menu-caption"></figcaption>
+            </figure>
+
+            <div class="menu__card">
+              <p class="menu__note" id="menu-note"></p>
+              <ol class="dishes" id="dishes" aria-live="polite"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="spaces" id="spaces">
+        <div class="container">
+          <div class="spaces__head">
+            <div>
+              <p class="eyebrow" data-i18n="spaces.eyebrow">
+                03 — Пространства
+              </p>
+              <h2 class="h2 reveal" data-i18n="spaces.title">
+                Три способа<br /><em>провести вечер</em>
+              </h2>
+            </div>
+            <p class="body reveal" data-i18n="spaces.body">
+              От ужина у стойки шефа до закрытого вечера за ширмами — выберите
+              формат под настроение.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card card--pine reveal">
+              <figure class="card__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1681270496598-13c5365730c8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                  alt="Подача у стойки омакасе"
+                  loading="lazy"
+                  width="900"
+                  height="700"
+                />
+                <span class="card__num">I</span>
+              </figure>
+              <div class="card__body">
+                <h3 data-i18n="card1.t">Стойка омакасе</h3>
+                <p data-i18n="card1.d">
+                  Восемь мест напротив шефа из светлого кедра. Двенадцать подач,
+                  которые готовят у вас на глазах.
+                </p>
+                <span class="card__meta" data-i18n="card1.m"
+                  >2 сеанса · 18:30 и 21:15 · 145 €</span
+                >
+              </div>
+            </article>
+
+            <article class="card card--persimmon reveal">
+              <figure class="card__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1601351841251-766245326eee?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                  alt="Главный зал с подвесными лампами"
+                  loading="lazy"
+                  width="900"
+                  height="700"
+                />
+                <span class="card__num">II</span>
+              </figure>
+              <div class="card__body">
+                <h3 data-i18n="card2.t">Главный зал</h3>
+                <p data-i18n="card2.d">
+                  Терракотовые стены, светлый дуб и мягкий свет бумажных
+                  фонарей. Меню à la carte и открытая робата.
+                </p>
+                <span class="card__meta" data-i18n="card2.m"
+                  >48 мест · à la carte</span
+                >
+              </div>
+            </article>
+
+            <article class="card card--indigo reveal">
+              <figure class="card__photo">
+                <img
+                  src="https://images.unsplash.com/photo-1634714434666-ef41b76b9cc9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                  alt="Приватная комната с деревянными скамьями"
+                  loading="lazy"
+                  width="900"
+                  height="700"
+                />
+                <span class="card__num">III</span>
+              </figure>
+              <div class="card__body">
+                <h3 data-i18n="card3.t">Комната «Цуки»</h3>
+                <p data-i18n="card3.d">
+                  Приватный зал за ширмами сёдзи для ужинов до 12 гостей. Своё
+                  меню и сомелье по сакэ.
+                </p>
+                <span class="card__meta" data-i18n="card3.m"
+                  >до 12 гостей · от 120 € на гостя</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">04 — Атмосфера</p>
+          <h2 class="h2 reveal" data-i18n="gallery.title">
+            Вечер <em>в KINTSU</em>
+          </h2>
+          <div class="mosaic">
+            <figure class="m m--a reveal">
+              <img
+                src="https://images.unsplash.com/photo-1617870314635-fc819547ec11?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                alt="Красные фонари в узком переулке"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="m m--b reveal">
+              <img
+                src="https://images.unsplash.com/photo-1563612116625-3012372fccce?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                alt="Суши на деревянном подносе"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="m m--c reveal">
+              <img
+                src="https://images.unsplash.com/photo-1639716553235-a8275d845fd7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                alt="Мясо на гриле в темноте"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="m m--d reveal">
+              <img
+                src="https://images.unsplash.com/photo-1748674754166-f84c8d1d77e6?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                alt="Зелёный коктейль с цветком"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="m m--e reveal">
+              <img
+                src="https://images.unsplash.com/photo-1504416285472-eccf03dd31eb?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                alt="Гости в ресторане"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="chef">
+        <div class="container chef__inner">
+          <figure class="chef__photo reveal">
+            <img
+              src="https://images.unsplash.com/photo-1512132411229-c30391241dd8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+              alt="Шеф выкладывает овощи на тарелку"
+              loading="lazy"
+            />
+          </figure>
+          <div class="chef__text">
+            <svg
+              class="chef__mark reveal"
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <use href="#mark" />
+            </svg>
+            <blockquote class="chef__quote reveal" data-i18n="chef.quote">
+              «Трещина — это место, где блюдо начинает рассказывать свою
+              историю».
+            </blockquote>
+            <p class="chef__name reveal" data-i18n="chef.name">
+              Шеф-повар KINTSU
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Бронирование ===== -->
+      <section class="reserve" id="reserve">
+        <svg class="reserve__pattern" aria-hidden="true">
+          <rect width="100%" height="100%" fill="url(#waves)" />
+        </svg>
+        <div class="container reserve__grid">
+          <div class="reserve__intro">
+            <p class="eyebrow eyebrow--light" data-i18n="res.eyebrow">
+              05 — Бронирование
+            </p>
+            <h2 class="h2" data-i18n="res.title">
+              Ваш стол<br /><em>ждёт</em>
+            </h2>
+            <p class="body" data-i18n="res.body">
+              Бронь открывается за 30 дней. Для омакасе-стойки просим приходить
+              за 10 минут до начала сеанса.
+            </p>
+            <p class="body body--small" data-i18n="res.small">
+              Группы от 7 гостей и комната «Цуки» — по телефону.
+            </p>
+          </div>
+
+          <div class="reserve__box">
+            <form class="form" id="reserve-form" novalidate>
+              <fieldset class="seg">
+                <legend data-i18n="f.space">Где сидеть</legend>
+                <div class="seg__options">
+                  <label
+                    ><input
+                      type="radio"
+                      name="space"
+                      value="hall"
+                      checked
+                    /><span data-i18n="f.hall">Главный зал</span></label
+                  >
+                  <label
+                    ><input type="radio" name="space" value="omakase" /><span
+                      data-i18n="f.omakase"
+                      >Стойка омакасе</span
+                    ></label
+                  >
+                </div>
+              </fieldset>
+
+              <label class="field">
+                <span data-i18n="f.name">Имя</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span data-i18n="f.phone">Телефон</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="+372"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span data-i18n="f.date">Дата</span>
+                <input type="date" name="date" id="date" required />
+              </label>
+              <label class="field">
+                <span data-i18n="f.guests">Гостей</span>
+                <select name="guests">
+                  <option>1</option>
+                  <option selected>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                </select>
+              </label>
+
+              <fieldset class="times">
+                <legend data-i18n="f.time">Время</legend>
+                <div class="times__list" id="times"></div>
+              </fieldset>
+
+              <p class="form__error" id="form-error" role="alert"></p>
+              <button
+                type="submit"
+                class="btn btn--primary btn--full"
+                data-i18n="f.submit"
+              >
+                Отправить запрос
+              </button>
+            </form>
+
+            <div class="thanks" id="thanks" hidden>
+              <svg class="thanks__mark" viewBox="0 0 64 64" aria-hidden="true">
+                <use href="#mark" />
+              </svg>
+              <p class="thanks__title" data-i18n="f.thanks">Спасибо</p>
+              <p class="body" id="thanks-text"></p>
+              <button
+                class="link-btn"
+                id="new-booking"
+                type="button"
+                data-i18n="f.new"
+              >
+                Новая бронь
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="container visit__grid">
+          <div>
+            <p class="eyebrow" data-i18n="visit.eyebrow">06 — Как найти</p>
+            <p class="visit__address" data-i18n="visit.address">
+              Ротерманни 9<br />10111 Таллин
+            </p>
+            <p class="body" data-i18n="visit.body">
+              Квартал Ротерманни, между Старым городом и портом. Вход со стороны
+              площади, под вывеской со знаком.
+            </p>
+            <a
+              class="btn btn--line"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Rotermanni+9+Tallinn"
+              target="_blank"
+              rel="noopener"
+              data-i18n="visit.map"
+              >Открыть на карте</a
+            >
+          </div>
+
+          <dl class="hours">
+            <div>
+              <dt data-i18n="h.mon">Пн</dt>
+              <dd data-i18n="h.closed">Закрыто</dd>
+            </div>
+            <div>
+              <dt data-i18n="h.tt">Вт – Чт</dt>
+              <dd>18:00 – 23:00</dd>
+            </div>
+            <div>
+              <dt data-i18n="h.fs">Пт – Сб</dt>
+              <dd>18:00 – 00:00</dd>
+            </div>
+            <div>
+              <dt data-i18n="h.sun">Вс</dt>
+              <dd data-i18n="h.brunch">13:00 – 17:00 · дим-сам бранч</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a href="#top" class="logo" aria-label="KINTSU">
+          <svg class="logo__mark" aria-hidden="true"><use href="#mark" /></svg>
+          <span class="logo__text">
+            <span class="logo__word">KINTSU</span>
+            <span class="logo__sub">Asian kitchen · Tallinn</span>
+          </span>
+        </a>
+        <p>
+          <span data-i18n="foot.addr">Ротерманни 9, 10111 Таллин</span
+          ><br />[+372 0000 0000] · [hello@kintsu.ee]
+        </p>
+        <p class="footer__social">
+          <a href="#">Instagram</a><a href="#">Facebook</a>
+        </p>
+      </div>
+      <div class="container footer__copy">
+        © <span id="year"></span> KINTSU.
+        <span data-i18n="foot.note"
+          >Вымышленный ресторан для примера дизайна. Фото: Unsplash.</span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
